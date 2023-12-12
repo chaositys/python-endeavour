@@ -106,7 +106,14 @@ def welcome():
             Full_answer = contact_the_dev(Full_answer)
         else:
             print("Invaild Input!")
-            break
+            time.sleep(0.3)
+            print("loading.")
+            time.sleep(0.3)
+            print("loading..")
+            time.sleep(0.3)
+            print("loading...")
+            time.sleep(0.75)
+            print("done!")
 
 
 
