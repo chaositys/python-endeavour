@@ -34,6 +34,10 @@ def welcome():
 
         time.sleep(0.2)
 
+        print("5. Quit program")
+        
+        time.sleep(0.2)
+        
         Full_answer = int(input("Enter: "))
         print("*"*30)
         return Full_answer
@@ -104,6 +108,8 @@ def welcome():
             break
         elif Full_answer == 4:
             Full_answer = contact_the_dev(Full_answer)
+        elif Full_answer == 5:
+            exit()
         else:
             print("Invaild Input!")
             time.sleep(0.3)
@@ -159,7 +165,7 @@ def making_a_carpet():
 
         time.sleep(0.2)
 
-        print("5. This does nothing!")
+        print("5. Exit")
         answer = int(input("Enter: "))
         return answer
 
@@ -205,10 +211,9 @@ def making_a_carpet():
         input("Press Enter to go back: ")
         answer= welcome()
     elif answer == 5:
-        print("You chose option 5. This does nothing!")
+        print("Loading...")
         time.sleep(1)
-        input("Press Enter to go back: ")
-        answer= welcome()
+        return 100
     collem = row*aspect_ratio
     one_half = (collem-3)/2
     (one_half) = int(one_half)
