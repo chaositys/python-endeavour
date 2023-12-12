@@ -38,10 +38,18 @@ def welcome():
         
         time.sleep(0.2)
         
-        Full_answer = int(input("Enter: "))
-        print("*"*30)
-        return Full_answer
+        Full_answer = input("Enter: ")
+        if Full_answer.isdigit():
+            print("*"*30)
+            return Full_answer
+        else:
+            print("error code:23 ")
+            time.sleep(0.8)
+            print("quiting program letter entered")
+            time.sleep(01.5)
+            return 5
     Full_answer = welcomed(Full_answer)
+        
        
     
         
@@ -61,6 +69,8 @@ def welcome():
             elif Tasks_input == 3:
                 Full_answer = welcomed(Full_answer)
                 return Full_answer
+            else:
+                return 1
 
     
     def info_on_tasks(Full_answer):
