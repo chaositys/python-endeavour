@@ -38,16 +38,11 @@ def welcome():
         
         time.sleep(0.2)
         
-        Full_answer = input("Enter: ")
-        if Full_answer.isdigit():
-            print("*"*30)
-            return Full_answer
-        else:
-            print("error code:23 ")
-            time.sleep(0.8)
-            print("quiting program letter entered")
-            time.sleep(01.5)
-            return 5
+        Full_answer = int(input("Enter: "))
+        
+        
+        return Full_answer
+        
     Full_answer = welcomed(Full_answer)
         
        
@@ -112,25 +107,16 @@ def welcome():
         elif Full_answer == 2:
             Full_answer = info_on_tasks(Full_answer)
         elif Full_answer == 3:
-         Full_answer = update_logs(Full_answer)
+            Full_answer = update_logs(Full_answer)
         elif Full_answer == 7 or Full_answer == 8:
             return Full_answer
             break
+        
         elif Full_answer == 4:
             Full_answer = contact_the_dev(Full_answer)
         elif Full_answer == 5:
             exit()
-        else:
-            print("Invaild Input!")
-            time.sleep(0.3)
-            print("loading.")
-            time.sleep(0.3)
-            print("loading..")
-            time.sleep(0.3)
-            print("loading...")
-            time.sleep(0.75)
-            print("done!")
-            return 69
+        
 
 
 
@@ -331,7 +317,7 @@ def password_and_username_generator():
             numfirst_username = random.randint(3,99)
             numsecond_username = numfirst_username - random.randint(1,numfirst_username-1)
             # Generate a random username with the first part of the first word and the last part of the second word
-            username = ''.join(random.choice(string_e[numfirst_username][:len(string_e[numfirst_username]) // 2]) + random.choice(string_e[numsecond_username][len(string_e[numsecond_username]) // 2:]) for i in range(username_length - 1))
+            username = ''.join(random.choice(string_e[numfirst_username][:len(string_e[numfirst_username]) // 2+1]) + random.choice(string_e[numsecond_username][len(string_e[numsecond_username]) // 2:]) for i in range(username_length - 1))
 
 
             # Generate a random password
@@ -343,11 +329,11 @@ def password_and_username_generator():
             regenerate = input("Press 'R' to regenerate or any other key to go back: ")
             if regenerate.upper() == 'R':
                 print("*"*30)
-            elif regenerate == 'P':
+            elif regenerate.upper() == 'P':
                 print(password)
                 input("press enter to go back")
                 break
-            elif regenerate == 'U':
+            elif regenerate.upper() == 'U':
                 print(username)
                 input("press enter to go back")
                 break
@@ -371,8 +357,7 @@ elif Full_answer == 8:
     time.sleep(0.5)
     cheack_to_exit = password_and_username_generator()
 
-elif Full_answer ==69:
-    Full_answer = welcome()
+
 
 
 if cheack_to_exit == 100:
