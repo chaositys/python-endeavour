@@ -120,6 +120,7 @@ def welcome():
             print("loading...")
             time.sleep(0.75)
             print("done!")
+            return 69
 
 
 
@@ -359,6 +360,10 @@ elif Full_answer == 8:
     print("")
     time.sleep(0.5)
     cheack_to_exit = password_and_username_generator()
+
+elif Full_answer ==69:
+    Full_answer = welcome()
+
 
 if cheack_to_exit == 100:
     Full_answer = welcome()
