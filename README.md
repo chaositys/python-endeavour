@@ -1,4 +1,5 @@
 # python-endeavour
 This is all of my python projects in one.
 
-Just download the file then run it.
+Press code then press download zip once this has installed extract the file and run it.
+Enjoy:)
